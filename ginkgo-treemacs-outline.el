@@ -28,6 +28,7 @@
 ;;; Code:
 
 (require 'treemacs)
+(require 'treemacs-treelib)
 
 (defconst ginkgo-treemacs-outline-buffer-name "*Ginkgo Outline*")
 
@@ -121,7 +122,7 @@ When invoked, this function does the following:
                    (json-parse-string)
                    (-map 'ginkgo-treemacs-outline--build-entry-point)))
         (code-buffer (current-buffer))
-        (buffer (get-buffer-create "*ginkgo outline*")))
+        (buffer (get-buffer-create ginkgo-treemacs-outline-buffer-name)))
     (select-window (display-buffer-in-side-window buffer ginkgo-treemacs-outline-position-params))
     (with-current-buffer (get-buffer-create ginkgo-treemacs-outline-buffer-name)
       (treemacs-initialize ginkgo-treemacs-outline-treemacs-root
