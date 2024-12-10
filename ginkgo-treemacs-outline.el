@@ -130,5 +130,5 @@ When invoked, this function does the following:
                   (setq-local ginkgo-treemacs-outline--treemacs-tree tree)
                   (setq-local ginkgo-treemacs-outline--reference-buffer code-buffer))))))
 
-(provide ginkgo-treemacs-outline)
+(provide 'ginkgo-treemacs-outline)
 ;;; ginkgo-treemacs-outline.el ends here
